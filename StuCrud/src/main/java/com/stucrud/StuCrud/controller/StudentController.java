@@ -6,7 +6,6 @@ import com.stucrud.StuCrud.entity.Users;
 import com.stucrud.StuCrud.repo.StudentRepository;
 import com.stucrud.StuCrud.repo.UserDetailsRepository;
 import com.stucrud.StuCrud.service.CustomUserDetailsService;
-import com.stucrud.StuCrud.service.StudentService;
 import jakarta.annotation.security.PermitAll;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +31,6 @@ public class StudentController {
 
     @Autowired
     PasswordEncoder passwordEncoder;
-
-    @Autowired
-    StudentService studentService;
-
-    List<Student> list = studentService.list;
 
     @PostMapping("/insert")
     @PreAuthorize("hasAuthority('STUDENT_WRITE')")
