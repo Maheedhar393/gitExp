@@ -19,4 +19,8 @@ public class StudentService{
         studentRepository.save(student);
     }
 
+    public Student getStudentByRollNo(int rollNo) {
+        return studentRepository.findById(rollNo).orElse(null);
+    }
+
 }
