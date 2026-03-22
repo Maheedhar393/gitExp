@@ -16,6 +16,8 @@ public class StudentService{
     private StudentRepository studentRepository;
 
     public void saveStudent(Student student) {
+        int con = 10;
+        System.out.println("Inside saveStudent method, con value: " + con);
         studentRepository.save(student);
     }
 
