@@ -23,7 +23,6 @@ public class StudentService{
     public void saveStudent(Student student) {
         int con = 300;
         System.out.println("Inside saveStudent method, con value: " + con);
-        list.add(student);
         studentRepository.save(student);
     }
 
